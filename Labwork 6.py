@@ -29,21 +29,24 @@ class func():
     def funY(self, x, a):
         return  round((math.atan(10 * a ** 2 + 17 * a * x + 63 * x ** 2)) * -1, 5)
 
+def main():
+    x1, x2, a1, a2 = map(int, input('Enter the limits for x and a: ').split())
+    flag = int(input('\nEnter String of steps to calculate: '))
+    var = lists(x1, x2, a1, a2, flag)
+    cnt = 0
+    ans = func([], [], [])
 
-x1, x2, a1, a2 = map(int, input('Enter the limits for x and a: ').split())
-flag = int(input('\nEnter String of steps to calculate: '))
-var = lists(x1, x2, a1, a2, flag)
-cnt = 0
-ans = func([], [], [])
+    for a in range(var.alowl, var.ahigh + 1):
+        for x in range(var.xlow, var.xhigh + 1):
+            if cnt < var.step:
+                ans.G.append(ans.funG(x, a))
+                ans.F.append(ans.funF(x, a))
+                ans.Y.append(ans.funY(x, a))
+                cnt += 1
+            else:
+                break
 
-for a in range(var.alowl, var.ahigh + 1):
-    for x in range(var.xlow, var.xhigh + 1):
-        if cnt < var.step:
-            ans.G.append(ans.funG(x, a))
-            ans.F.append(ans.funF(x, a))
-            ans.Y.append(ans.funY(x, a))
-            cnt += 1
-        else:
-            break
+    print(f'\nG = {ans.G}\nF = {ans.F}\nY = {ans.Y}')
 
-print(f'\nG = {ans.G}\nF = {ans.F}\nY = {ans.Y}')
+if __name__ == "__main__":
+    main()
