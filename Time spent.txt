@@ -1,0 +1,10 @@
+Data size: 100000 | Time spent: 0.046650 sec | Points in circle: 982
+Data size: 200000 | Time spent: 0.091851 sec | Points in circle: 1875
+Data size: 300000 | Time spent: 0.138781 sec | Points in circle: 2858
+Data size: 400000 | Time spent: 0.187581 sec | Points in circle: 3885
+Data size: 500000 | Time spent: 0.233903 sec | Points in circle: 4163
+Data size: 600000 | Time spent: 0.296784 sec | Points in circle: 5693
+Data size: 700000 | Time spent: 0.335744 sec | Points in circle: 6761
+Data size: 800000 | Time spent: 0.373218 sec | Points in circle: 7553
+Data size: 900000 | Time spent: 0.416770 sec | Points in circle: 8589
+Data size: 1000000 | Time spent: 0.478020 sec | Points in circle: 9545
