@@ -17,13 +17,15 @@ def Y(x, a):
 
 
 x1, x2, a1, a2 = map(int, input('Enter the limits for x and a: ').split())
-flag = int(input('Enter number of steps to calculate: '))
+flag = int(input('Enter String of steps to calculate: '))
 key = int(input('Choose an equation:\n' + 
                 '1 - Equation G\n' + 
                 '2 - Equation F\n' + 
                 '3 - Equation Y\n'))
+pat = float(input('Enter String pattern: '))
 cnt = 0
-ans, pairs = [], []
+ans, pairs, Nn = [], [], []
+Mark = False
 
 for a in range(a1, a2 + 1):
     for x in range(x1, x2 + 1):
@@ -64,6 +66,16 @@ for a in range(a1, a2 + 1):
             break
 
 if key in [1, 2, 3]:
-    print(f'x | {fun}', f'{max(ans)[1]} | {max(ans)[0]}', f'{min(ans)[1]} | {min(ans)[0]}', sep='\n')
+    print(f'x | {fun}\n{max(ans)[1]} | {float(max(ans)[0])}\n{min(ans)[1]} | {float(min(ans)[0])}')
+    for i in range(len(ans)):
+        print(ans[i][0], end=" ")
+        if ans[i][0]== pat:
+            Mark = True
+            Nn.append(i+1)
+            
+    if Mark:
+        print(f'\nString find {Nn}')
+    else:
+        print(f'\nString not find')
 else:
     print('Incorrect value')
